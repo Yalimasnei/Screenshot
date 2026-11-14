@@ -71,7 +71,7 @@ NVENC 只在设备通过 HEVC、无损编码、输入格式、位深和尺寸能
 
 ## 快捷键拦截
 
-启用“运行时屏蔽 Windows 截图快捷键”后，程序会在运行期间接管相关截图组合键，包括 `Win+Shift+S`、`Win+Shift+R`、`PrtScn`、`Win+PrtScn` 和 `Alt+PrtScn`。程序退出后 Windows 原有行为恢复。Xbox Game Bar 等其他快捷键不保证能够拦截。
+启用“运行时屏蔽 Windows 截图快捷键”后，程序会在运行期间接管相关截图组合键，包括 `Win+Shift+S`、`Win+Shift+R`、`PrtScn`、`Win+PrtScn` 和 `Alt+PrtScn`。程序退出后 Windows 原有行为恢复。Xbox Game Bar 等其他快捷键不保证能够拦截。（其实不启用好像也能拦住）
 
 ## 源码目录
 
@@ -100,8 +100,6 @@ Screenshot/
 pwsh -File .\scripts\export-source.ps1 -OutputZip 'C:\path\Screenshot-source.zip'
 ```
 
-目标 ZIP 必须不存在。脚本会重新读取压缩包并核对每个文件的大小和 SHA-256。
-
 ## 限制
 
 - 不捕获鼠标指针，不提供录屏和延时截图。
@@ -114,4 +112,4 @@ pwsh -File .\scripts\export-source.ps1 -OutputZip 'C:\path\Screenshot-source.zip
 
 本项目基于 [GNU General Public License v3.0](LICENSE)。
 
-`third_party/nv-codec-headers/nvEncodeAPI.h` 保留其原有 MIT 许可证，具体来源和许可边界见 [docs/third-party.md](docs/third-party.md)。
+本仓库包含源自 MIT 许可上游项目的成果，详见 [docs/third-party.md](docs/third-party.md)。
